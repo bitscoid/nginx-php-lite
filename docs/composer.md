@@ -3,7 +3,7 @@
 If you need [Composer](https://getcomposer.org/) in your project, here's an easy way to add it.
 
 ```Dockerfile
-FROM trafex/php-nginx:latest
+FROM bantenitsolutions/nginx-php-lite:latest
 
 # Install composer from the official image
 COPY --from=composer /usr/bin/composer /usr/bin/composer
@@ -30,6 +30,6 @@ RUN composer install \
   --no-progress
 
 # Continue stage build with the desired image and copy the source including the dependencies downloaded by composer
-FROM trafex/php-nginx:latest
-COPY --chown=nginx --from=composer /app /var/www/html
+FROM bantenitsolutions/nginx-php-lite:latest
+COPY --chown=nginx --from=composer /app /var/www/bits
 ```

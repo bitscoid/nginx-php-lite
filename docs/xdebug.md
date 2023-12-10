@@ -21,16 +21,16 @@ xdebug.client_port=9003
 Create a new image with the following `Dockerfile`
 
 ```Dockerfile
-FROM trafex/php-nginx:latest
+FROM bantenitsolutions/nginx-php-lite:latest
 
 # Temporary switch to root
 USER root
 
 # Install xdebug
-RUN apk add --no-cache php82-pecl-xdebug
+RUN apk add --no-cache php-pecl-xdebug
 
 # Add configuration
-COPY xdebug.ini ${PHP_INI_DIR}/conf.d/xdebug.ini
+COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 # Switch back to non-root user
 USER nobody
