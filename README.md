@@ -37,7 +37,7 @@ Or mount your own code to be served by PHP-FPM & Nginx
     docker run -p 80:80 -v ~/app:/var/www/bits bitscoid/nginx-php-lite
 
 ## Configuration
-In [config/](config/) you'll find the default configuration files for Nginx, PHP and PHP-FPM.
+In nginx and php directory you'll find the default configuration files for Nginx, PHP and PHP-FPM.
 If you want to extend or customize that you can do so by mounting a configuration file in the correct folder;
 
 Nginx Configuration:
