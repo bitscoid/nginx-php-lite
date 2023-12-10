@@ -4,9 +4,9 @@ services:
         image: ${IMAGE_NAME}:${IMAGE_TAG}
         build: .
     sut:
-        image: alpine:3.13
+        image: alpine:3.18
         depends_on:
             - app
-        command: /tmp/run.sh
+        command: chmod +x /tmp/run.sh; /tmp/run.sh
         volumes:
-            - "./run.sh:/tmp/run.sh:ro"
+            - "./run.sh:/tmp/run.sh"
