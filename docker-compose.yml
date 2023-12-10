@@ -9,4 +9,4 @@ services:
             - app
         command: chmod +x /tmp/run.sh; /tmp/run.sh
         volumes:
-            - "./run.sh:/tmp/run.sh"
+            - "/run.sh:/tmp/run.sh"
