@@ -40,19 +40,21 @@ Or mount your own code to be served by PHP-FPM & Nginx
 In [config/](config/) you'll find the default configuration files for Nginx, PHP and PHP-FPM.
 If you want to extend or customize that you can do so by mounting a configuration file in the correct folder;
 
-Nginx configuration:
+Nginx Configuration:
 
-    docker run -v "`pwd`/default.conf:/etc/nginx/http.d/default.conf" bitscoid/nginx-php-lite
+    docker run -v "./server/nginx/nginx.conf:/etc/nginx/http.d/default.conf" bitscoid/nginx-php-lite
 
-PHP configuration:
+Nginx Default Site:
 
-    docker run -v "`pwd`/php.ini:/usr/local/etc/php/php.ini" bitscoid/nginx-php-lite
+    docker run -v "./server/nginx/http.d/default.conf:/etc/nginx/http.d/default.conf" bitscoid/nginx-php-lite
 
-PHP-FPM configuration:
+PHP Configuration:
 
-    docker run -v "`pwd`/www.conf:/usr/local/etc/php-fpm.d/www.conf" bitscoid/nginx-php-lite
+    docker run -v "./server/php/php.ini:/usr/local/etc/php/php.ini" bitscoid/nginx-php-lite
 
-_Note; Because `-v` requires an absolute path I've added `pwd` in the example to return the absolute path to the current directory_
+PHP-FPM Configuration:
+
+    docker run -v "./server/php/www.conf:/usr/local/etc/php-fpm.d/www.conf" bitscoid/nginx-php-lite
 
 ## Documentation and examples
 To modify this container to your specific needs please see the following examples;
