@@ -7,6 +7,6 @@ services:
         image: alpine:3.18
         depends_on:
             - app
-        command: chmod +x /tmp/run.sh; /tmp/run.sh
+        command: /tmp/run.sh
         volumes:
-            - "/run.sh:/tmp/run.sh"
+            - "./run.sh:/tmp/run.sh"
