@@ -8,6 +8,7 @@ RUN apk --update add \
   curl \
   nginx \
   supervisor \
+  && docker-php-ext-install pdo_mysql \
   && rm -rf /var/cache/apk/*
 
 # Configure PHP-FPM
@@ -48,6 +49,7 @@ HEALTHCHECK --timeout=10s CMD curl --silent --fail http://127.0.0.1
 
 LABEL org.opencontainers.image.vendor="Nurul Imam" \
     org.opencontainers.image.url="https://github.com/bitscoid/nginx-php-lite" \
+    org.opencontainers.image.source="https://github.com/bitscoid/nginx-php-lite" \
     org.opencontainers.image.title="Nginx & PHP-FPM v8.3 Alpine" \
     org.opencontainers.image.description="Nginx & PHP-FPM v8.3 with minimal extensions of Alpine Linux." \
     org.opencontainers.image.version="1.0" \
