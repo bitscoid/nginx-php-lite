@@ -1,7 +1,7 @@
 version: '3.7'
 services:
     app:
-        image: bantenitsolutions/nginx-php-lite
+        image: ${IMAGE_NAME}:${IMAGE_TAG}
         build: .
         ports:
             - '80:80'
