@@ -29,13 +29,13 @@ the best practices and is easy to understand and modify to your needs.
 
 Start the Docker container:
 
-    docker run -p 80:80 bitscoid/nginx-php-lite
+    docker run -p 80:80 bantenitsolutions/nginx-php-lite
 
 See the PHP info on http://localhost
 
 Or mount your own code to be served by PHP-FPM & Nginx
 
-    docker run -p 80:80 -v ~/app:/var/www/bits bitscoid/nginx-php-lite
+    docker run -p 80:80 -v ~/app:/var/www/bits bantenitsolutions/nginx-php-lite
 
 ## Configuration
 In nginx and php directory you'll find the default configuration files for Nginx, PHP and PHP-FPM.
@@ -43,19 +43,19 @@ If you want to extend or customize that you can do so by mounting a configuratio
 
 Nginx Configuration:
 
-    docker run -v "./server/nginx/nginx.conf:/etc/nginx/http.d/default.conf" bitscoid/nginx-php-lite
+    docker run -v "./server/nginx/nginx.conf:/etc/nginx/http.d/default.conf" bantenitsolutions/nginx-php-lite
 
 Nginx Default Site:
 
-    docker run -v "./server/nginx/http.d/default.conf:/etc/nginx/http.d/default.conf" bitscoid/nginx-php-lite
+    docker run -v "./server/nginx/http.d/default.conf:/etc/nginx/http.d/default.conf" bantenitsolutions/nginx-php-lite
 
 PHP Configuration:
 
-    docker run -v "./server/php/php.ini:/usr/local/etc/php/php.ini" bitscoid/nginx-php-lite
+    docker run -v "./server/php/php.ini:/usr/local/etc/php/php.ini" bantenitsolutions/nginx-php-lite
 
 PHP-FPM Configuration:
 
-    docker run -v "./server/php/www.conf:/usr/local/etc/php-fpm.d/www.conf" bitscoid/nginx-php-lite
+    docker run -v "./server/php/www.conf:/usr/local/etc/php-fpm.d/www.conf" bantenitsolutions/nginx-php-lite
 
 ## Documentation and examples
 To modify this container to your specific needs please see the following examples;
