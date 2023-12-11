@@ -1,4 +1,10 @@
 # Docker PHP-FPM 8.3 & Nginx 1.25 on Alpine Linux
+[![Docker Pull](https://img.shields.io/docker/pulls/bantenitsolutions/nginx-php-lite.svg)](https://hub.docker.com/r/bantenitsolutions/nginx-php-lite/)
+![nginx 1.25](https://img.shields.io/badge/nginx-1.25-brightgreen.svg)
+![php 8.3](https://img.shields.io/badge/php-8.3-brightgreen.svg)
+[![Docker Test](https://github.com/bitscoid/nginx-php-lite/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/bitscoid/nginx-php-lite/actions/workflows/build.yml)
+![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+
 Example PHP-FPM 8.3 & Nginx 1.25 container image for Docker, built on [Alpine Linux](https://www.alpinelinux.org/).
 
 Repository: https://github.com/bitscoid/nginx-php-lite
@@ -11,11 +17,6 @@ Repository: https://github.com/bitscoid/nginx-php-lite
 * Optimized to only use resources when there's traffic (by using PHP-FPM's `on-demand` process manager)
 * The services Nginx, PHP-FPM and supervisord run under a non-privileged user (nobody) to make it more secure
 * The logs of all the services are redirected to the output of the Docker container (visible with `docker logs -f <container name>`)
-
-[![Docker Pulls](https://img.shields.io/docker/pulls/bitscoid/nginx-php-lite.svg)](https://hub.docker.com/r/bantenitsolutions/nginx-php-lite/)
-![nginx 1.25](https://img.shields.io/badge/nginx-1.25-brightgreen.svg)
-![php 8.3](https://img.shields.io/badge/php-8.3-brightgreen.svg)
-![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## [![Banten IT Solutions](https://bits.co.id/wp-content/uploads/Logo.png)](https://bits.co.id)
 I can help you with [Web & App Development, Containerization, Kubernetes, Monitoring, Infrastructure as Code.](https://bits.co.id).
