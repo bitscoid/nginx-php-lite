@@ -1,12 +1,14 @@
 version: '3.7'
 services:
     app:
-        image: ${IMAGE_NAME}:${IMAGE_TAG}
+        image: bantenitsolutions/nginx-php-lite
         build: .
+        ports:
+            - '80:80'
     sut:
         image: alpine:3.18
         depends_on:
             - app
-        command: chmod +x /tmp/run.sh; /tmp/run.sh
+        command: /tmp/run.sh
         volumes:
             - "./run.sh:/tmp/run.sh"
