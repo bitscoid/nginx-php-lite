@@ -9,6 +9,6 @@ services:
     image: alpine:3.18
     depends_on:
       - app
-    command: ls
+    command: ls -a /tmp
     volumes:
       - "./run.sh:/tmp/run.sh:ro"
