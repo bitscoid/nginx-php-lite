@@ -57,7 +57,25 @@ PHP-FPM Configuration:
 
     docker run -v "./server/php/www.conf:/usr/local/etc/php-fpm.d/www.conf" bantenitsolutions/nginx-php-lite
 
-## Documentation and examples
+## Documentation
+Add extra PHP modules
+
+You may use this image as the base image to build your own. For example, to add mongodb module:
+Create a Dockerfile
+
+    FROM bantenitsolutions/nginx-php-lite
+    RUN apk add --no-cache --update --virtual .phpize-deps $PHPIZE_DEPS \
+        && apk add --no-cache --update --virtual .all-deps $PHP_MODULE_DEPS \
+        && pecl install mongodb \
+        && docker-php-ext-enable mongodb \
+        && rm -rf /tmp/pear \
+        && apk del .all-deps .phpize-deps \
+        && rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
+
+Build Image
+
+    docker build -t my-nginx-php-lite .
+
 To modify this container to your specific needs please see the following examples;
 
 * [Adding xdebug support](https://github.com/bitscoid/nginx-php-lite/blob/master/docs/xdebug.md)

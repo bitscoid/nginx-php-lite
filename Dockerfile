@@ -4,7 +4,7 @@ LABEL Maintainer="Nurul Imam <bits.co.id>" \
     Description="Nginx & PHP-FPM v8.3 with lite extensions of Alpine Linux."
 
 # Install Packages
-RUN apk --update add \
+RUN apk --no-cache --update add \
   curl \
   nginx \
   supervisor \
