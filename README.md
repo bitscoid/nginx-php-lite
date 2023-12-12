@@ -1,9 +1,32 @@
-# Docker PHP-FPM 8.3 & Nginx 1.25 on Alpine Linux
-[![Docker Pull](https://img.shields.io/docker/pulls/bantenitsolutions/nginx-php-lite.svg)](https://hub.docker.com/r/bantenitsolutions/nginx-php-lite/)
-![nginx 1.25](https://img.shields.io/badge/nginx-1.25-brightgreen.svg)
-![php 8.3](https://img.shields.io/badge/php-8.3-brightgreen.svg)
-[![Docker Test](https://github.com/bitscoid/nginx-php-lite/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/bitscoid/nginx-php-lite/actions/workflows/build.yml)
-![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+<div>
+  <div align="center">
+    <a href="https://bits.co.id">
+      <img
+        alt="Banten IT Solutions"
+        src="https://bits.co.id/wp-content/uploads/Logo.png"
+        width="150">
+    </a>
+  </div>
+
+  <h1 align="center">Docker PHP-FPM 8.3 & Nginx 1.25 on Alpine Linux</h1>
+
+  <h4 align="center">
+    Lightweight & optimized <a href="https://www.docker.com/blog/how-to-rapidly-build-multi-architecture-images-with-buildx/">Multi-Arch Docker Images</a> (<code>x86_64</code>/<code>arm</code>/<code>arm64</code>) for <a href="http://nginx.org/en/CHANGES">Nginx 1.25.3</a> & <a href="https://www.php.net/manual/en/install.fpm.php">PHP-FPM</a> <a href="https://www.php.net/ChangeLog-8.php#PHP_8_3">8.3</a>) with essential extensions on top of latest Alpine Linux.
+  </h4>
+
+  <div align="center">
+    <a href="https://hub.docker.com/r/bantenitsolutions/nginx-php-lite/" title="MariaDB Lite"><img src="https://img.shields.io/docker/pulls/bantenitsolutions/nginx-php-lite.svg"></a> 
+    <a href="https://hub.docker.com/r/bantenitsolutions/nginx-php-lite/" title="Docker Image Version (tag latest semver)"><img src="https://img.shields.io/docker/v/bantenitsolutions/nginx-php-lite/4.0"></a> 
+    <a href="https://hub.docker.com/r/bantenitsolutions/nginx-php-lite/tags" title="Docker Image Size (tag)"><img src="https://img.shields.io/docker/image-size/bantenitsolutions/nginx-php-lite/4.0"></a> 
+    <a href="https://hub.docker.com/r/bantenitsolutions/nginx-php-lite/" title="Nginx 1.25.3"><img src="https://img.shields.io/badge/nginx-1.25.3-brightgreen.svg"></a> 
+    <a href="https://hub.docker.com/r/bantenitsolutions/nginx-php-lite/" title="PHP 8.3"><img src="https://img.shields.io/badge/php-8.3-brightgreen.svg"></a> 
+    <a href="https://github.com/bitscoid/nginx-php-lite/actions/workflows/build.yml" title="Docker Test Image"><img src="https://github.com/bitscoid/nginx-php-lite/actions/workflows/build.yml/badge.svg?branch=master"></a> 
+    <a href="https://bits.co.id" title="License MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a> 
+  </div>
+</div>
+
+
+## Description
 
 Example PHP-FPM 8.3 & Nginx 1.25 container image for Docker, built on [Alpine Linux](https://www.alpinelinux.org/).
 
