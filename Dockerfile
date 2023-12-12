@@ -3,6 +3,14 @@ FROM php:8.3.0-fpm-alpine3.18
 LABEL Maintainer="Nurul Imam <bits.co.id>" \
     Description="Nginx & PHP-FPM v8.3 with lite extensions of Alpine Linux."
 
+LABEL org.opencontainers.image.vendor="Nurul Imam" \
+    org.opencontainers.image.url="https://github.com/bitscoid/nginx-php-lite" \
+    org.opencontainers.image.source="https://github.com/bitscoid/nginx-php-lite" \
+    org.opencontainers.image.title="Nginx & PHP-FPM v8.3 Alpine" \
+    org.opencontainers.image.description="Nginx & PHP-FPM v8.3 with minimal extensions of Alpine Linux." \
+    org.opencontainers.image.version="5.0" \
+    org.opencontainers.image.documentation="https://github.com/bitscoid/nginx-php-lite"
+
 # Install Packages
 RUN apk --no-cache --update add \
   curl \
@@ -36,7 +44,7 @@ WORKDIR /var/www/bits
 EXPOSE 80
 
 # Make sure files/folders run under the nobody user
-RUN chown -R nobody.nobody /var/www/bits /run /var/lib/nginx /var/log/nginx
+RUN chown -R nobody:nobody /var/www/bits /run /var/lib/nginx /var/log/nginx
 
 # Switch to non-root user
 USER nobody
@@ -46,11 +54,3 @@ CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
 
 # Configure a healthcheck to validate that everything is up&running
 HEALTHCHECK --timeout=10s CMD curl --silent --fail http://127.0.0.1
-
-LABEL org.opencontainers.image.vendor="Nurul Imam" \
-    org.opencontainers.image.url="https://github.com/bitscoid/nginx-php-lite" \
-    org.opencontainers.image.source="https://github.com/bitscoid/nginx-php-lite" \
-    org.opencontainers.image.title="Nginx & PHP-FPM v8.3 Alpine" \
-    org.opencontainers.image.description="Nginx & PHP-FPM v8.3 with minimal extensions of Alpine Linux." \
-    org.opencontainers.image.version="1.0" \
-    org.opencontainers.image.documentation="https://github.com/bitscoid/nginx-php-lite"
