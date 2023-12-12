@@ -41,7 +41,6 @@ Repository: https://github.com/bitscoid/nginx-php-lite
 * The services Nginx, PHP-FPM and supervisord run under a non-privileged user (nobody) to make it more secure
 * The logs of all the services are redirected to the output of the Docker container (visible with `docker logs -f <container name>`)
 
-## [![Banten IT Solutions](https://bits.co.id/wp-content/uploads/Logo.png)](https://bits.co.id)
 I can help you with [Web & App Development, Containerization, Kubernetes, Monitoring, Infrastructure as Code.](https://bits.co.id).
 
 ## Goal of this project
